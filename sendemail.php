@@ -6,9 +6,9 @@
     header( 'Content-type: application/json' );
 
 
-    $to         = 'trendytheme.net@gmail.com';  // put your email here
+    $to         = 'mohammedalhagg2015@gmail.com';  // put your email here
 
-    $email_template = 'simple.html';
+    $email_template = 'simple.php';
 
     $subject    = strip_tags($_POST['subject']);
     $email       = strip_tags($_POST['email']);
