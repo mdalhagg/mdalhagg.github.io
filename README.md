@@ -1,3 +1,3 @@
 # mdalhagg.github.io
 
-make by mdalhagg
+making this site by mdalhagg
