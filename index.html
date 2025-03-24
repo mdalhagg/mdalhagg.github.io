@@ -57,7 +57,7 @@
           <li><a href="https://www.instagram.com/bakogokachan9"><i class="fa fa-instagram"></i></a></li>
           <li><a href="https://github.com/mdalhagg"><i class="fa fa-github"></i></a></li>
           <li><a href="https://wa.me/967776007148"><i class="fa fa-whatsapp"></i></a></li>
-
+          <li><a href="https://www.linkedin.com/in/mohammed-alhagg-8a49aa213/"><i class="fa fa-linkedin"></i></a></li>
         </ul>
       </div> <!-- /.social-icons -->
 		</div>
@@ -847,7 +847,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-12">
                   <i class="fa fa-users"></i>
-                  <h3 class="timer">67</h3> 
+                  <h3 class="timer">87</h3> 
                   <p>Happy Clients</p>
                 </div>
                 <!-- <div class="col-sm-3 col-xs-6">
@@ -1015,7 +1015,7 @@
           <div class="row">
             <div class="col-md-12">
               <h2>I'm available for freelance project</h2>
-              <a href="#" class="btn btn-default">Get Hired</a>
+              <a href="https://www.linkedin.com/in/mohammed-alhagg-8a49aa213/" class="btn btn-default">Get Hired</a>
             </div><!-- /.col-md-12 -->
           </div><!-- /.row -->
         </div><!-- /.container -->
@@ -1033,29 +1033,29 @@
           <div class="col-md-6">
             <div class="contact-form">
               <strong>Send me a message</strong>
-              <form name="contact-form" id="contactForm" action="sendemail.php" method="POST">
+              <form name="contact-form" id="contactForm"  method="POST">
 
                 <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required="">
+                  <input type="text" name="name" class="form-control" id="name" required>
                 </div>
 
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input type="email" name="email" class="form-control" id="email" required="">
+                  <input type="email" name="email" class="form-control" id="email" required>
                 </div>
 
                 <div class="form-group">
                   <label for="subject">Subject</label>
-                  <input type="text" name="subject" class="form-control" id="subject">
+                  <input type="text" name="subject" class="form-control" id="subject" required>
                 </div>
 
                 <div class="form-group">
                   <label for="message">Message</label>
-                  <textarea name="message" class="form-control" id="message" rows="5" required=""></textarea>
+                  <textarea name="message" class="form-control" id="message" rows="5" required></textarea>
                 </div>
 
-                <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+                <button type="submit" name="submit" onclick="sendEmail()" class="btn btn-primary">Send Message</button>
               </form>
             </div><!-- /.contact-form -->
           </div><!-- /.col-md-6 -->
@@ -1128,5 +1128,22 @@
   <script src="http://a.vimeocdn.com/js/froogaloop2.min.js"></script>
   <script src="assets/js/jquery.fitvids.js"></script>
   <script src="assets/js/scripts.js?v=2"></script>
+  <script>
+    function sendEmail() {
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+      var link = "mailto:mohammedalhagg2015@gmail.com"
+             + "?subject=" + encodeURIComponent(subject)
+             + "&body=My name is " + encodeURIComponent(name)
+             + ". I am contacting you from your personal website. Please respond to this email: "
+             + encodeURIComponent(email)
+             + ". My message is: "
+             + encodeURIComponent(message)
+             ;
+      window.location.href = link;
+    }
+  </script>
 </body>
 </html>
